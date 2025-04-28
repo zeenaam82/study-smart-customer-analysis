@@ -1,7 +1,7 @@
 import pytest
 import dask.dataframe as df
 
-#@pytest.fixture
+@pytest.fixture
 def load_data():
     dd = df.read_csv('../data/test.ft.txt', sep='\t', header=None, names=['label', 'text'])
     return dd
