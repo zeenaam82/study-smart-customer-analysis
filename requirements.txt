@@ -1,0 +1,5 @@
+numpy
+uvicorn
+dask[dataframe]
+fastapi
+pytest

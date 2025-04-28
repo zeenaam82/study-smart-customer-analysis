@@ -1,0 +1,27 @@
+# Python 기본
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# 가상환경
+venv/
+env/
+.venv/
+.env/
+.env
+.env.*
+
+# IDE & 에디터
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
