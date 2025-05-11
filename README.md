@@ -11,10 +11,10 @@
 
 ## 실행
 ### 서버 실행
->   > uvicorn src.run:app --host 0.0.0.0 --port 8000
+> uvicorn src.run:app --host 0.0.0.0 --port 8000
 ### 모델 학습
->   > python -m src.run train
+> python -m src.run train
 ### 예측 실행
->   > python -m src.run predict --text "제품 텍스트"
+> python -m src.run predict --text "제품 텍스트"
 ### Pytest
->   > pytest --maxfail=1 --disable-warnings -q
+> pytest --maxfail=1 --disable-warnings -q
