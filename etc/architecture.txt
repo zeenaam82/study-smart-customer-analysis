@@ -3,7 +3,7 @@
 +----------------+       +-------------------+       +-----------------+
 |                |       |                   |       |                 |
 |  Data Source   | --->  |   Data Processing | --->  |   ML Model      |
-|  (CSV, DB)     |       |   & Preprocessing |       |   (PyTorch)     |
+|  (ft.txt, DB)  |       |   & Preprocessing |       |   (PyTorch)     |
 |                |       |                   |       |   		     |
 +----------------+       +-------------------+       +-----------------+
                                   |                        |
