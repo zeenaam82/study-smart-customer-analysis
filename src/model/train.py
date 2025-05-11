@@ -76,7 +76,9 @@ def evaluate_training(model, val_loader, device):
     accuracy = accuracy_score(all_labels, all_preds)
     return accuracy
 
-def main(epochs=1, batch_size=8, learning_rate=1e-4, max_length=16):
+def main(epochs=3, batch_size=16, learning_rate=2e-5, max_length=32):
+    # epochs=1, batch_size=8, learning_rate=1e-4, max_length=16
+    # epochs=3, batch_size=16, learning_rate=2e-5, max_length=32
     # epochs=3, batch_size=32, learning_rate=2e-5, max_length=128
 
     logger.info("데이터 로드를 시작합니다.")
