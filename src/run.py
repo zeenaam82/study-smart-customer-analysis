@@ -1,11 +1,16 @@
 import sys
 import argparse
 import uvicorn
+from fastapi import FastAPI
 
 from src.utils.logger import logger
 from src.model.train import main as train_main
-from src.api.predict_api import app
 from src.model.predict import predict
+from src.api.routers import router
+
+app = FastAPI()
+# 라우터 등록
+app.include_router(router)
 
 def main():
     # argparse를 사용하여 명령어와 옵션들을 정의합니다.

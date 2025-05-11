@@ -49,7 +49,7 @@ def train(model, train_loader, optimizer, device):
     avg_loss = total_loss / len(train_loader)  # 평균 손실
     return avg_loss
 
-def evaluate(model, val_loader, device):
+def evaluate_training(model, val_loader, device):
     model.eval()
     all_preds = []
     all_labels = []
@@ -103,7 +103,7 @@ def main(epochs=1, batch_size=8, learning_rate=1e-4, max_length=16):
         avg_loss = train(model, train_loader, optimizer, device)
         logger.info(f"훈련 손실 값: {avg_loss:.4f}")
 
-        accuracy = evaluate(model, train_loader, device)
+        accuracy = evaluate_training(model, train_loader, device)
         logger.info(f"훈련 정확도: {accuracy:.4f}")
 
     # 모델 저장

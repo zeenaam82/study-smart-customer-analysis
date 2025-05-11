@@ -1,14 +1,12 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from fastapi import APIRouter
 from src.model.predict import predict
 
-app = FastAPI(title="Smart Customer Classifier API")
+router = APIRouter()
 
-class TextRequest(BaseModel):
-    text: str
-
-@app.post("/predict")
-async def get_prediction(request: TextRequest):
-    prediction = predict(request.text)  # predict 함수 호출
-    return {"predicted_class": prediction}
-
+# 이 엔드포인트는 텍스트 데이터 (리뷰)를 받아서 모델을 통해 예측을 수행하는 API입니다.
+# 요청 본문에서 `review` 데이터를 받아 모델에 전달하여, 예측된 레이블을 반환합니다.
+# 예측 결과를 반환하는 역할을 합니다.
+@router.post("/")
+async def predict_sentiment(text: str):
+    label = predict(text)
+    return {"predicted_label": label}

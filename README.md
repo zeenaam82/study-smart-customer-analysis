@@ -8,12 +8,11 @@
 > https://www.kaggle.com/datasets/bittlingmayer/amazonreviews
 
 ## 실행
-> API 서버 실행
+> 서버 실행
 >   > uvicorn src.run:app --host 0.0.0.0 --port 8000
->   > 이 명령어는 API 서버를 실행합니다. uvicorn이 API 서버를 0.0.0.0:8000에서 실행합니다.
 
 > 모델 학습
->   > python -m src.run train --epochs 5
+>   > python -m src.run train
 
 > 예측 실행
 >   > python -m src.run predict --text "제품 텍스트"

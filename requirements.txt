@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9167465ed31f6dd1961629218ac58d3e7df3cb18245a821f881131cd023b1399
-size 74
+fastapi==0.115.12
+uvicorn==0.34.0
+transformers==4.51.3
+scikit-learn==1.6.1
+dask==2024.8.0
+tqdm
+asyncpg==0.25.0
+databases==0.5.2
+sqlalchemy==1.4.48
+psycopg2==2.9.3
